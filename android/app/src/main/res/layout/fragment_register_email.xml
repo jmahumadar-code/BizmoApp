@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/backLogin1"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:background="@color/transparent"
+            android:text=" "/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingrese su número de teléfono"
+            android:layout_margin="20dp"
+            android:textSize="20sp" />
+
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/emailreg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_email"
+                    android:imeOptions="actionGo"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout> -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/flagcountry"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:id="@+id/codePhone"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="+56"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lnum"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/Error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese su número"
+                    android:imeOptions="actionGo"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/wainting"
+        android:visibility="invisible"
+        android:background="@drawable/back_waiting"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="110dp"
+        android:minWidth="110dp" />
+</RelativeLayout>

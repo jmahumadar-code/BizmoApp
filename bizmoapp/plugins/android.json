@@ -1,0 +1,88 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-badge": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyCMhS39gXOpWiwqhfsD_yKGUa6d-bdeZig",
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-mauron85-background-geolocation": {
+            "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+            "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "net.ekuwang.cordova.plugin.statusbar": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        }
+    },
+    "dependent_plugins": {
+        "com.googlemaps.ios": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.bizmolimited.bizapp"
+        }
+    }
+}

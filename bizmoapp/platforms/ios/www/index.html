@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; connect-src 'self' 'unsafe-inline' 'unsafe-eval' blob: ws: *;">
+
+    <title>BizAPP</title>
+
+    <link rel="stylesheet" href="css/framework7/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7/framework7-icons.css">
+    <link rel="stylesheet" href="css/framework7/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/toast/toast.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Views -->
+    <div class="views"> 
+        <div class="view view-login">
+            <div class="view">
+                <div class="pages">
+                    <div class="page">
+                        <div class="page-content login-screen-content">
+                            <div class="login-screen-title">
+                                <div class="item-inner">
+                                    <img id="inicio" src="img/logo.png" width="50%" class="lazy lazy-fadeIn center_ini">
+                                </div>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">
+                                                <center>
+                                                    <span class="f7-icons color-1">email_fill</span>
+                                                </center>
+                                            </div>
+                                            <div class="item-input">
+                                                <input type="email" id="mail" placeholder="E-Mail">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">
+                                                <center>
+                                                    <span class="f7-icons color-1">lock_fill</span>
+                                                </center>
+                                            </div>
+                                            <div class="item-input">
+                                                <input type="password" id="password" placeholder="Contraseña">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input">
+                                                <span class="center color-1">Recordar
+                                                <label class="label-switch">
+                                                    <input id="che" type="checkbox">
+                                                    <div class="checkbox"></div>
+                                                </label></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-25"></div>
+                                <div class="col-50">
+                                    <button id="sub" class="button button-big log button-fill" width="100%">Iniciar Sesión</button>
+                                </div>
+                                <div class="col-25"></div>
+                            </div>
+                            <div class="row copyright">
+                                <div class="col-20"></div>
+                                <div class="col-60">
+                                    <p>Desarrollado por <a href="http://www.jamax.cl" target="_blank">JAMAX</a></p>
+                                </div>
+                                <div class="col-20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/framework7/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/toast/toast.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

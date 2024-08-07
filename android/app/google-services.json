@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "148310590486",
+    "firebase_url": "https://bizmo-164015.firebaseio.com",
+    "project_id": "bizmo-164015",
+    "storage_bucket": "bizmo-164015.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148310590486:android:3a66a971968458d0",
+        "android_client_info": {
+          "package_name": "com.bizmolimited.bizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148310590486-9oi2u5lv34ito1snusmuu2poc9u91r6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bizmolimited.bizapp",
+            "certificate_hash": "f33375317921fe23cbc2dd09a58a3ff54eb77eed"
+          }
+        },
+        {
+          "client_id": "148310590486-kvpec1fa1ku8rk15g3n9df2776b6nde8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC17NiLe0DN5PZGJUdL1KtjoPuFPXKznd8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148310590486-kvpec1fa1ku8rk15g3n9df2776b6nde8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "148310590486-ib8qccrkg9u0aivuspd365plnjb89i80.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bizmolimited.bizapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'BizApp' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for BizApp
+  pod 'GoogleSignIn'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'FlagKit'
+  pod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-4.0'
+  pod 'PopupDialog', '~> 0.6'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+end

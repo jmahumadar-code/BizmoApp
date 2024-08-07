@@ -1,0 +1,69 @@
+-- MySQL dump 10.13  Distrib 5.7.9, for osx10.9 (x86_64)
+--
+-- Host: localhost    Database: bizmo_db
+-- ------------------------------------------------------
+-- Server version	5.6.35
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tusers`
+--
+
+DROP TABLE IF EXISTS `tusers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tusers` (
+  `uid` varchar(36) NOT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `fname` varchar(150) DEFAULT NULL,
+  `lname` varchar(150) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `picture` blob,
+  `fk_country` int(11) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `payment_status` varchar(45) DEFAULT NULL,
+  `type_card` varchar(45) DEFAULT NULL,
+  `call_out` decimal(15,2) DEFAULT NULL,
+  `fk_mo` varchar(45) DEFAULT NULL,
+  `date_in` datetime DEFAULT NULL,
+  `date_off` datetime DEFAULT NULL,
+  `type_user` varchar(45) DEFAULT NULL,
+  `rut` varchar(15) DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `role` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`uid`),
+  KEY `fk_tusers_tcountry1_idx` (`fk_country`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tusers`
+--
+
+LOCK TABLES `tusers` WRITE;
+/*!40000 ALTER TABLE `tusers` DISABLE KEYS */;
+INSERT INTO `tusers` VALUES ('02c56734-39da-11e7-93d2-00163ca3ae26',NULL,NULL,NULL,'e10adc3949ba59abbe56e057f20f883e',NULL,NULL,NULL,'bescob@hotmail.com',NULL,NULL,NULL,NULL,'2017-05-15 21:50:17',NULL,'CLIENT',NULL,'M','NATURAL'),('2ab687d9-2c62-11e7-a5fd-00163ca3ae26',NULL,NULL,NULL,'7242d6c91121f8e2e87803855c028e55',NULL,NULL,NULL,'ismael.tapia@jamax.cl',NULL,NULL,NULL,NULL,'2017-04-28 18:29:39',NULL,'CLIENT','12823450-0','M','NATURAL'),('48e892ef-2dee-11e7-a5fd-00163ca3ae26','bescobar','Buddy','Escobar','e10adc3949ba59abbe56e057f20f883e',NULL,NULL,'12345678','bescobar@microland.cl',NULL,NULL,NULL,NULL,'2017-04-30 17:45:10',NULL,'OFFER',NULL,NULL,'LEGAL'),('70c1c33b-3b72-11e7-93d2-00163ca3ae26',NULL,NULL,NULL,'3fc0a7acf087f549ac2b266baf94b8b1',NULL,NULL,NULL,'alejandro.catalan.celis@gmail.com',NULL,NULL,NULL,NULL,'2017-05-17 22:33:56',NULL,NULL,NULL,NULL,NULL),('7bf6635f-2d47-11e7-a5fd-00163ca3ae26','jmiguel','Jose Miguel','Ahumada','9507b7d4ea88578b709e3466c4376925',NULL,NULL,'987654321','jose@atcom.co.nz',NULL,NULL,NULL,NULL,'2017-04-29 21:51:10',NULL,'OFFER',NULL,'M','NATURAL'),('9ee9abfa-3b73-11e7-93d2-00163ca3ae26',NULL,NULL,NULL,'c50735551161343760d0c0a6e2717e72',NULL,NULL,NULL,'juansaiz16@gmail.com',NULL,NULL,NULL,NULL,'2017-05-17 22:42:23',NULL,NULL,NULL,NULL,NULL),('a5be187a-369b-11e7-93d2-00163ca3ae26',NULL,NULL,NULL,'9507b7d4ea88578b709e3466c4376925',NULL,NULL,NULL,'angela@atcom.co.nz',NULL,NULL,NULL,NULL,'2017-05-11 18:46:18',NULL,NULL,NULL,'F','NATURAL'),('caa2d11b-3b78-11e7-93d2-00163ca3ae26',NULL,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',NULL,NULL,NULL,'',NULL,NULL,NULL,NULL,'2017-05-17 23:19:23',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `tusers` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-07-28 12:58:18

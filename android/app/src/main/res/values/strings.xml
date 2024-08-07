@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">Bizmobiz</string>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar Sesión</string>
+    <string name="action_register">Registrar Usuario</string>
+    <string name="action_sign_in_short">Iniciar</string>
+    <string name="error_invalid_email">El email no es válido</string>
+    <string name="error_invalid_password">La contraseña es demasiado corta</string>
+    <string name="error_data_error">Los datos ingresados son incorrectos</string>
+    <string name="error_request">Se ha producido un error, intente nuevamente</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="permission_rationale">Este permiso es necesario para el funcionamiento de la aplicación</string>
+    <string name="label_btn_rrss">O conéctate con un cuenta de red social</string>
+    <string name="ok_txt">OK</string>
+    <string name="img_init">Img Init</string>
+    <string name="noApp">BizmoBiz aún no se encuentra habilitado en tu país.</string>
+
+    <string name="pista_search"><font size="20">¿Qué Necesitas?</font></string>
+
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="title_activity_maps">Map</string>
+
+    <string name="labelRRSS">Elige una cuenta</string>
+
+    <string name="regexEmail">^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$</string>
+    <string name="regexName">^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð\'\\s\\,\\.\\-]+$</string>
+    <string name="regexLastName">^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð\'\\s,\\.\\-]+$</string>
+    <string name="regexPass">([A-Za-z0-9._-]+){6,}$</string>
+    <string name="regexTextSearch">[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+</string>
+
+    <string name="setup_version_key">version_setup</string>
+    <string name="offer_work_image">offer_work_image</string>
+    <string name="id_user_key">id_user</string>
+    <string name="name_user_key">name_user</string>
+    <string name="lastname_user_key">lastname_user</string>
+    <string name="phone_key">phone</string>
+    <string name="email_key">email</string>
+    <string name="photo_user_key">photo</string>
+    <string name="is_company_key">is_company</string>
+    <string name="is_offerer_key">is_offer</string>
+    <string name="offer_job_key">offer_job</string>
+    <string name="service_name_key">service_name</string>
+    <string name="service_id_key">service_id</string>
+    <string name="offer_job_id_key">id</string>
+    <string name="description_job_key">description</string>
+    <string name="title_job_key">title</string>
+    <string name="code_country">country_code</string>
+    <string name="pass_key">pass_user</string>
+    <string name="latitud_key">latitud</string>
+    <string name="longitud_key">longitud</string>
+    <string name="geo_frecuency_key">geo_frecuency</string>
+    <string name="error_code">Código incorrecto</string>
+
+    <string name="register_user">Registro de Usuario</string>
+    <string name="place_name">Nombres</string>
+    <string name="place_lastname">Apellidos</string>
+    <string name="place_username">Usuario</string>
+    <string name="place_email">Email</string>
+    <string name="place_pass">Contraseña</string>
+    <string name="place_phone">Número de Teléfono</string>
+
+    <string name="close">Cerrar</string>
+    <string name="register_user_action">Registrar Usuario</string>
+    
+    <string name="error_phone_invalid">El número de teléfono es inválido</string>
+
+    <string name="bizapp_pref">bizappPref</string>
+
+    <string name="facebook_app_id">177957102755745</string>
+    <string name="fb_login_protocol_scheme">fb177957102755745</string>
+
+
+    <string name="labelentrylogin">Realiza tu actividad con Bizmobiz</string>
+    <string name="ingreseNum">Ingrese su Número</string>
+    <string name="label_pass_login">Te damos la bienvenida una vez más. Inicia sesión para continuar</string>
+    <string name="hint_pass_login">Ingresa tu contraseña</string>
+    <string name="lost_pass">Olvidé mi contraseña</string>
+    <string name="create_account">No tengo una cuenta</string>
+    <string name="hint_cod1">1</string>
+    <string name="hint_cod2">2</string>
+    <string name="hint_cod3">3</string>
+    <string name="hint_cod4">4</string>
+    <string name="hint_email">ejemplo@bizmobiz.com</string>
+    <string name="label_email_register">Ingresa un correo eletrónico para asociar a tu cuenta</string>
+    <string name="label_name_register">Ingrese su nombre</string>
+    <string name="hint_lastname">Apellidos</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_pass_register">Su contraseña</string>
+    <string name="label_pass_register">Ingresa una contraseña (Mínimo 6 carácteres)</string>
+    <string name="manu_nav_legal">Legal</string>
+    <string name="menu_nav_exit">Salir</string>
+    <string name="menu_nav_add_job">Agregar Trabajo</string>
+    <string name="menu_nav_see_job">Ver Trabajo Ofrecido</string>
+    <string name="menu_nav_change">Modo de Usuario</string>
+    <string name="menu_nav_configuration">Configuración</string>
+    <string name="menu_nav_help">Ayuda</string>
+    <string name="label_login_phone">Ingrese su email para iniciar sesión en Bizmobiz</string>
+    <string name="close_session">¿Desea cerrar su sesión de Bizmobiz?</string>
+    <string name="error_email">El formato del correo es incorrecto</string>
+    <string name="error_phone">El número de teléfono no coincide con el de su país</string>
+
+    <string name="font">fonts/fontawesome-webfont.ttf</string>
+
+    <string name="error_name_lastname_input">Hay caracteres no válidos</string>
+    <string name="error_email_input">El email se encuentra incompleto</string>
+    <string name="error_verify">Se ha producido un error mientras se verificaba el número</string>
+    <string name="error_init_session">Se ha producido un error mientras se iniciaba sesión</string>
+    <string name="error_pass">La contraseña tiene menos de 6 caracteres o caracteres inválidos</string>
+    <string name="error_create_account">Se ha producido un error mientras se creaba su cuenta en Bizmobiz</string>
+    <string name="googlelabel">Google</string>
+    <string name="facebooklabel">Facebook</string>
+
+    <string name="verify_code">verify_code</string>
+    <string name="label_code">Ingresa el codigo que te enviamos al email </string>
+
+    <string name="name_special">reg_name_spe</string>
+    <string name="lastname_special">reg_lastname_spe</string>
+    <string name="email_special">reg_email_spe</string>
+    <string name="type_special">reg_type_spe</string>
+    <string name="iduser_special">reg_iduser_spe</string>
+    <string name="special_reg">special_reg</string>
+    <string name="special_log">special_log</string>
+    <string name="id_notification">id_notification</string>
+
+    <string name="category_key">category_key</string>
+
+    <string name="gps_off">Para el correcto funcionamiento de BizmoBiz se necesita el GPS encendido.</string>
+
+</resources>

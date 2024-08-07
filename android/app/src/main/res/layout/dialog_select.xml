@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp">
+        <Button
+            android:id="@+id/close"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/White"
+            android:text="X"
+            android:background="@color/transparent"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <ImageView
+            android:src="@drawable/navimg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="#FFFFBB33"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/White"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="center"
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_select"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="Con que modalidad desea iniciar:"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/btn1"
+            android:background="@drawable/back_btn"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/btn_icon_act1"
+                android:text="icon"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/btn_text_act1"
+                android:text="Hola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn2"
+            android:background="@drawable/back_btn"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/btn_icon_act2"
+                android:text="icon"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/btn_text_act2"
+                android:text="Hola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

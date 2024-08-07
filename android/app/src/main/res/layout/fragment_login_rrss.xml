@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/backRRSS"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="25sp"
+            android:background="@color/transparent"
+            android:text=" "/>
+
+        <TextView
+            android:id="@+id/textintrorrss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/labelRRSS"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:id="@+id/facebook_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/facebook"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/facebooklabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button_fb"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/google_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/google"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/googlelabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/wainting"
+            android:visibility="invisible"
+            android:background="@drawable/back_waiting"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="110dp"
+            android:minWidth="110dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; connect-src 'self' 'unsafe-inline' 'unsafe-eval' blob: ws: *;">
+
+    <title>BizAPP</title>
+
+    <link rel="stylesheet" href="css/framework7/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7/framework7-icons.css">
+    <link rel="stylesheet" href="css/framework7/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/toast/toast.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="panel panel-left panel-cover">
+        <div id="cuadro_datos" class="content-block inset">
+          <div class="content-block-inner">
+            <center>
+                <img src="img/person.png" width="100px" height="100px" class="img-circle"/>
+                <br/>
+
+            </center>
+            <p id="name" style="text-align: center; font-weight: bold;" class="color-3"></p>
+            <p id="email" style="text-align: center; font-size: 12px;" class="color-3"></p>
+            <p id="phone" style="text-align: center; font-size: 12px;" class="color-3"></p>
+          </div>
+        </div>
+        <div class="content-block inset">
+          <div class="content-block-inner">
+
+            <p style="text-align: center;" class="color-3"><b>Conectado desde:</b></p>
+            <p style="text-align: center;"><span id="from" class="color-3"></span> <img id="flag" width="20px"/></p>
+          </div>
+        </div>
+        <div id="change_type_user" class="content-block inset">
+          <div class="content-block-inner">
+                <p class="color-3" style="text-align: center;"><b>Modo Oferente</b></p>
+                <div class="row">
+                    <div class="col-20"><p class="color-3"><b>OFF</b></p></div>
+                    <div class="col-40">
+                        <center>
+                            <label class="label-switch">
+                                <input id="oferente" type="checkbox">
+                                <div class="checkbox"></div>
+                            </label>
+                        </center>
+                    </div>
+                    <div class="col-20"><p class="color-3"><b>ON</b></p></div>
+                </div>                
+          </div>
+        </div>
+        <div class="content-block inset">
+          <div class="content-block-inner" onClick="cerrarSesion();">
+                <center>
+                    <a style="text-align: center; font-size: 14px;" class="color-3">
+                        <i class="f7-icons size-14">logout</i> Cerrar Sesión
+                    </a>
+                </center>                
+          </div>
+        </div>
+    </div>
+    <!-- Views -->
+    <div class="views"> 
+        <div class="view view-main">
+            <div class="pages">
+                <div id="page-main" class="page navbar-fixed toolbar-fixed">
+                    <div class="map" id="map" style="height:100%; padding-top:25px;margin-top:-20px;">
+                        <div style="position:absolute;width:50px;height:100%;background-color:rgba(255,255,255,.01);"></div>
+                        <div id="searchBox" class="content-block inset">
+                            <div class="content-block-inner">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <a data-panel="left" class="link open-panel">
+                                            <i class="f7-icons color-1">bars</i>
+                                        </a>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="query" style="width:100%;font-size:14px;" placeholder="¿Qué necesitas?"/>
+                                    </div>
+                                    <div class="col-15">
+                                        <a id="searchBtn" style="height:30px; font-size:12px; padding:0 5px;" class="button color-1 border_app" onclick="envSolicitudServicioSimple();" ><i class="f7-icons" style="line-height: 26px;">search</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a id="tab1" class="floating-button-left open-popup" data-popup=".popup-msg">
+                            <i class="f7-icons">email</i>
+                        </a>
+                        <a id="tab2" class="floating-button-left open-popup" style="bottom:88px;display:none;" data-popup=".popup-offer">
+                            <i class="icon demo-icon-1">
+                                <span id="cantidadOferentes"class="badge bg-red">10</span>
+                                <i class="f7-icons">persons</i>
+                            </i>
+                        </a>
+                        <a id="tab4" class="floating-button-right" onclick="clearMap();">
+                            <i class="f7-icons">trash</i>
+                        </a>
+                        <a id="tab3" class="floating-button-right open-popup" data-popup=".popup-serv" style="bottom:88px;">
+                            <i class="f7-icons">search</i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Mensajes Popup -->
+            <div class="popup popup-msg" style="padding-top:25px; margin-top:-20px; height:110%;">
+                <div class="div-title-pop">
+                    <a class="close-popup icon-title-pop"><i class="f7-icons color-1">close_round</i></a>
+                    <div class="content-block-title color-1">Mensajes</div>
+                </div>
+                <!-- This block will be inset only on tablets -->
+                <div class="content-block inset">
+                  <div class="content-block-inner">
+                      <p>No hay Mensajes</p>
+                  </div>
+                </div>
+            </div>
+            <!-- Mensajes Popup -->
+            <div class="popup popup-offer" style="padding-top:25px; margin-top:-20px; height:110%;">
+                <div class="div-title-pop">
+                    <a class="close-popup icon-title-pop"><i class="f7-icons color-1">close_round</i></a>
+                    <div class="content-block-title color-1">Oferentes</div>
+                </div>
+                <div class="content-block inset">
+                  <div class="content-block-inner">
+                      <p style="color: #05395a;">Existen los siguientes oferentes que pueden entregar el servicio solicitado:</p>
+                  </div>
+                </div>
+                
+                <div class="data-table card">
+                  <table>
+                    <thead>
+                        <tr>
+                            <th class="label-cell">Nombre</th>
+                            <th class="label-cell">Apellido</th>
+                            <th class="label-cell">Perfil</th>
+                            <th class="label-cell">Descripción</th>
+                            <th class="label-cell">Distancia (KM)</th>
+                            <th class="label-cell">Valoración</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableOffer">
+                    </tbody>
+                  </table>
+                </div>
+                <div class="list-block inset">
+                  <ul>
+                    <li>
+                      <a class="item-link list-button" onclick="mostrarAllOff();" style="background:white;color: #05395a;"><i class="f7-icons" style="font-size:17px;">world_fill</i> Ver todos en el Mapa</a>
+                    </li>
+                  </ul>
+                </div>  
+            </div>
+            <!-- Solicitud de Servicio Popup -->
+            <div class="popup popup-serv" style="padding-top:25px; margin-top:-20px; height:110%;">
+
+                <div class="div-title-pop">
+                    <a class="close-popup icon-title-pop"><i class="f7-icons color-1">close_round</i></a>
+                    <div class="content-block-title color-1">Solicitud de Servicio</div>
+                </div>
+                <!-- This block will be inset only on tablets -->
+                <div class="list-block inset" style="font-size: 14px;">
+                    <ul style="background: #FFFFFF;">
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons color-3">briefcase</i></div>
+                            <div class="item-inner">
+                              <div class="item-title label color-3">Familia de Serv.</div>
+                              <div class="item-input">
+                                <input id="fam_serv" style="font-size: 14px; color: #05395a;" type="text" placeholder="Familia de Servicio" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons color-3">briefcase</i></div>
+                            <div class="item-inner">
+                              <div class="item-title label color-3">Tipo de Serv.</div>
+                              <div class="item-input">
+                                <input id="tipo_serv" style="font-size: 14px; color: #05395a;" type="text" placeholder="Tipo de Servicio" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="align-top">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons color-3">list</i></div>
+                            <div class="item-inner">
+                              <div class="item-title label color-3">Descripción</div>
+                              <div class="item-input">
+                                <textarea id="descrip_serv" style="font-size: 14px; color: #05395a;" placeholder="Descripción de la Solicitud de Servicio"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons color-3">world</i></div>
+                            <div class="item-inner">
+                              <div class="item-title label color-3">Radio de Búsq.</div>
+                              <div class="item-input">
+                                <input id="radio_serv" style="font-size: 14px; color: #05395a;" type="text" placeholder="Km. a la Redonda" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                </div>  
+                
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-80">
+                        <button id="env_soli" style="font-size: 16px;" class="button button-big log button-fill" width="100%"><i class="f7-icons" style="font-size:17px;">paper_plane_fill</i> Enviar Solicitud</button>
+                    </div>
+                    <div class="col-10"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/framework7/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/toast/toast.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

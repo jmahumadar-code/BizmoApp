@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/cont_request"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/transparent"
+                android:text=" "
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/init_search_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Información solicitada para postular al trabajo:" />
+
+
+                <LinearLayout
+                    android:id="@+id/container_av"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <Switch
+                        android:id="@+id/switch_costo"
+                        android:textColor="@color/DimGray"
+                        android:text="Rango de Precio    "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/lcosto"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/Error"
+                        app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1">
+
+                        <EditText
+
+                            android:id="@+id/costo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Precio"
+                            android:text="$ "
+                            android:focusable="true"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:overScrollMode="always"
+                            android:lines="1"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="18sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/min_max"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+
+                            android:id="@+id/lcosto_min"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/Error"
+                            app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <EditText
+
+                                android:id="@+id/costo_min"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Precio Mínimo"
+                                android:text="$ "
+                                android:focusable="true"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:overScrollMode="always"
+                                android:lines="1"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:textSize="18sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+
+                            android:id="@+id/lcosto_max"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/Error"
+                            app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <EditText
+
+                                android:id="@+id/costo_max"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Precio Máximo"
+                                android:text="$ "
+                                android:focusable="true"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:overScrollMode="always"
+                                android:lines="1"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:textSize="18sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/lcomentario"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="144"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/Error"
+                        app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/comentario"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:hint="Comentario"
+                            android:focusable="true"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="18sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+                        <Button
+                            android:id="@+id/goTo"
+                            android:background="@color/transparent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:textSize="60sp"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/wainting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@drawable/back_waiting"
+        android:minHeight="110dp"
+        android:minWidth="110dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

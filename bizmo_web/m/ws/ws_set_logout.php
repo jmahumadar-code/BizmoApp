@@ -1,0 +1,27 @@
+<?php require_once("../cnx/setup.php");
+header('Content-type: application/json');
+header('Cache-Control: no-cache, must-revalidate');
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+
+session_start();  
+
+$iLogin = strip_tags($_GET["iLogin"]);
+
+$sql ="call  sp_set_logout($iLogin)";
+$rsDP= $mysqli->query($sql);
+
+if (isset($rsDP) && $rsDP->num_rows>0){
+	while ($row = $rsDP->fetch_object()) {
+		$data= $row;
+	}
+    clearStoredResults($mysqli);
+    if (isset($data)){	
+          echo json_encode($data,JSON_PRETTY_PRINT);	
+         //echo json_encode($data, JSON_UNESCAPED_UNICODE);	
+	}
+    else 
+       echo '{"hres":"-1"}'; 
+}
+else 
+   echo '{"hres":"-1"}';
+?>
